@@ -118,32 +118,32 @@ After this our linux profile is created for this ubuntu 22.04 version.
 
 
 ### Once Memory dump is saved as memorydump.lime in the Ubuntu system, I tested it with the volatility3 with the following commands:
-•	PsList: Lists active processes in the memory image.
-•	PsScan: Scans for processes in the memory image by walking the process list.
-•	PsTree: Displays active processes in a parent-child relationship tree structure.
-•	Banners: Identifies and prints the operating system banner information from the memory image.
-•	Capabilities: Lists the Linux capabilities for each process.
-•	Check Modules: Compares the loaded modules list against the module list obtained from sysfs.
-•	Check Syscall: Checks the system call table for unexpected modifications (hooks).
-•	Elfs: Lists ELF executables and shared libraries mapped into process address spaces.
-•	Envvars: Lists environment variables for each process.
-•	IOMem: Provides information similar to what is available in /proc/iomem on a live Linux system.
-•	Keyboard_Notifiers: Analyzes keyboard notifier call chains for hooks.
-•	KMSG: Reads the kernel log buffer messages.
-•	Lsmod: Lists currently loaded kernel modules.
-•	Lsof: Lists open file descriptors across all processes.
-•	Malfind: Searches for memory regions within processes that may contain injected code.
-•	Mountinfo: Lists mount points and mount namespaces for processes.
-•	Proc.Maps: Lists all memory-mapped files for each process.
-•	PsAux: Lists processes along with their command-line arguments.
-•	Sockstat: Lists network connections and sockets for each process.
-•	tty_check: Checks tty devices for hooks or manipulations.
-•	FrameworkInfo: Provides details about the Volatility framework's components and configuration.
-•	IsfInfo: Displays information about the available Intermediate Symbol Format (ISF) files.
-•	LayerWriter: Writes out the data from a specified memory layer (used for debugging and analysis).
-•	Check_afinfo: Verifies the operation function pointers for network protocols to check for rootkits.
-•	Check_creds: Looks for processes that are sharing credential structures, which could indicate credential reuse or theft.
-•	Check_idt: Checks the Interrupt Descriptor Table (IDT) for unexpected modifications, which could indicate rootkit activity.
+* PsList: Lists active processes in the memory image.
+* PsScan: Scans for processes in the memory image by walking the process list.
+* PsTree: Displays active processes in a parent-child relationship tree structure.
+* Banners: Identifies and prints the operating system banner information from the memory image.
+* Capabilities: Lists the Linux capabilities for each process.
+* Check Modules: Compares the loaded modules list against the module list obtained from sysfs.
+* Check Syscall: Checks the system call table for unexpected modifications (hooks).
+* Elfs: Lists ELF executables and shared libraries mapped into process address spaces.
+* Envvars: Lists environment variables for each process.
+* IOMem: Provides information similar to what is available in /proc/iomem on a live Linux system.
+* Keyboard_Notifiers: Analyzes keyboard notifier call chains for hooks.
+* KMSG: Reads the kernel log buffer messages.
+* Lsmod: Lists currently loaded kernel modules.
+* Lsof: Lists open file descriptors across all processes.
+* Malfind: Searches for memory regions within processes that may contain injected code.
+* Mountinfo: Lists mount points and mount namespaces for processes.
+* Proc.Maps: Lists all memory-mapped files for each process.
+* PsAux: Lists processes along with their command-line arguments.
+* Sockstat: Lists network connections and sockets for each process.
+* tty_check: Checks tty devices for hooks or manipulations.
+* FrameworkInfo: Provides details about the Volatility framework's components and configuration.
+* IsfInfo: Displays information about the available Intermediate Symbol Format (ISF) files.
+* LayerWriter: Writes out the data from a specified memory layer (used for debugging and analysis).
+* Check_afinfo: Verifies the operation function pointers for network protocols to check for rootkits.
+* Check_creds: Looks for processes that are sharing credential structures, which could indicate credential reuse or theft.
+* Check_idt: Checks the Interrupt Descriptor Table (IDT) for unexpected modifications, which could indicate rootkit activity.
 
 
 
