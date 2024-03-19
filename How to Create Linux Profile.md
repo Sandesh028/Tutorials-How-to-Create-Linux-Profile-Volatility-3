@@ -32,11 +32,18 @@ git clone https://github.com/volatilityfoundation/dwarf2json.git
 
 Next step: 
 ### Add the debug symbol repository
+```sh
 echo "deb http://ddebs.ubuntu.com $(lsb_release -cs) main restricted universe multiverse
+```
+```sh
 deb http://ddebs.ubuntu.com $(lsb_release -cs)-updates main restricted universe multiverse
+```
+```sh
 deb http://ddebs.ubuntu.com $(lsb_release -cs)-proposed main restricted universe multiverse" | \
+```
+```sh
 sudo tee -a /etc/apt/sources.list.d/ddebs.list
-
+```
 ### Install the debug symbol keyring
 ```sh
 $ sudo apt install ubuntu-dbgsym-keyring
