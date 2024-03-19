@@ -5,7 +5,7 @@
 
 
 I had downloaded and installed Ubuntu 22.04.36LTS which is pretty much stable.
-## Next step is :
+## Steps :
 ### Install Go 
 sudo apt update
 sudo apt install golang-go
