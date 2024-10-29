@@ -141,7 +141,6 @@ sudo python3 vol.py -f /home/sam/memdump.lime linux.psscan
 
 ### 23. Extract Banners Using `banners.Banners`
 ```bash
-sudo python3 vol.py -f /home/kali/memdump.lime banners.Banners
 sudo python3 vol.py -f /home/sam/memdump.lime banners.Banners
 ```
 
