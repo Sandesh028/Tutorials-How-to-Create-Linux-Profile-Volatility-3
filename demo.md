@@ -7,7 +7,44 @@ your own username/kernel version if demoing on a different box   everywhere belo
 user `sandesh`; students will see `whoami`'s own username instead.
  
 ---
- 
+## Glossary: Terms and Abbreviations
+
+- **LiME (Linux Memory Extractor):** A Linux kernel module that captures a computer’s physical memory for later forensic analysis.
+- **Ubuntu:** A Linux-based operating system used in this demo.
+- **LTS (Long-Term Support):** A release supported with updates for an extended period.
+- **VM (Virtual Machine):** A software-based computer that runs an operating system inside another computer.
+- **Kernel:** The core part of an operating system that manages hardware and system resources.
+- **HWE (Hardware Enablement):** Ubuntu updates that provide support for newer hardware and kernels.
+- **GCC (GNU Compiler Collection):** A set of tools that includes the C compiler used to build LiME.
+- **`build-essential`:** An Ubuntu package that installs common tools needed to compile software.
+- **Git:** A version-control tool used here to download the LiME source code.
+- **`make`:** A build tool that follows instructions in a project’s makefile to compile software.
+- **`.ko` (Kernel Object):** A file containing a Linux kernel module that can be loaded into the running kernel.
+- **`insmod` (Insert Module):** A command that loads a kernel module into the running kernel.
+- **`rmmod` (Remove Module):** A command that unloads a kernel module from the running kernel.
+- **`lsmod` (List Modules):** A command that shows kernel modules currently loaded in Linux.
+- **`dmesg` (Display Message):** A command that displays messages recorded by the Linux kernel.
+- **Root:** The administrator account with permission to perform privileged system operations.
+- **RAM (Random-Access Memory):** Temporary working memory used by the computer while it is running.
+- **GB (Gigabyte):** A unit of data size equal to one billion bytes.
+- **GiB (Gibibyte):** A unit of data size equal to 1,073,741,824 bytes.
+- **Physical address space:** The set of memory addresses available to the computer’s physical or virtual hardware.
+- **Kernel ring buffer:** A temporary area where Linux stores messages from the kernel and hardware.
+- **Out-of-tree module:** A kernel module developed separately from the Linux kernel’s built-in source tree.
+- **Kernel taint:** A status flag indicating that a condition, such as loading an unsigned external module, may affect kernel support or debugging.
+- **Module signature:** A digital signature used to verify who created a kernel module and whether it has been altered.
+- **Secure Boot:** A startup security feature that can block unsigned boot components or kernel modules.
+- **MOK (Machine Owner Key):** A key that can be enrolled to allow Secure Boot to trust certain third-party software.
+- **EFI (Extensible Firmware Interface):** Firmware used to start a computer and hand control to its operating system.
+- **Dual-boot:** A setup that lets a computer start one of two or more installed operating systems.
+- **Volatility 3:** A memory-forensics framework used to analyze captured memory images.
+- **Debug symbols:** Extra build information that helps forensic tools connect kernel data to names and structures.
+- **EDR (Endpoint Detection and Response):** Security software that monitors computers and helps detect and investigate threats.
+- **`format=lime`:** An option that tells LiME to save the memory capture in its segmented LiME format.
+- **`format=raw`:** An option that tells LiME to save the capture as a raw sequence of bytes.
+- **`format=padded`:** An option that tells LiME to save the capture with padding between memory regions.
+
+ ---
 ## 0. Check your kernel version first
  
 ```bash
