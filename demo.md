@@ -1,4 +1,4 @@
-# LiME In-Class Demo — Verified Steps (Ubuntu 22.04)
+# LiME In-Class Demo - Verified Steps (Ubuntu 22.04)
  
 Scope for tomorrow: **LiME only** — cloning it, building the kernel module, and using it
 to capture a memory dump. No dwarf2json, no Volatility3 analysis here.
