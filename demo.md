@@ -1,4 +1,4 @@
-# LiME In-Class Demo - Verified Steps (Ubuntu 22.04)
+# LiME In-Class Demo  (Ubuntu 22.04)
  
  
 Every command below was run start-to-finish on this exact machine
