@@ -1,11 +1,9 @@
 # LiME In-Class Demo - Verified Steps (Ubuntu 22.04)
  
-Scope for tomorrow: **LiME only** — cloning it, building the kernel module, and using it
-to capture a memory dump. No dwarf2json, no Volatility3 analysis here.
  
 Every command below was run start-to-finish on this exact machine
 (Ubuntu 22.04.3 LTS, kernel `6.8.0-138-generic`, VMware VM) right before class. Substitute
-your own username/kernel version if demoing on a different box — everywhere below assumes
+your own username/kernel version if demoing on a different box   everywhere below assumes
 user `sandesh`; students will see `whoami`'s own username instead.
  
 ---
@@ -18,7 +16,7 @@ uname -r
  
 Whatever this prints, the `.ko` file you build later will be named
 `lime-<that-version>.ko`. Point this out to students so the filename in step 3 doesn't
-confuse them — it's not a typo, it's *their* kernel version.
+confuse them   it's not a typo, it's *their* kernel version.
  
 ## 1. Install build tools
  
@@ -40,7 +38,7 @@ fails with:
 make[3]: *** [scripts/Makefile.build:243: .../tcp.o] Error 127
 ```
  
-Fix — install the matching version:
+Fix   install the matching version:
  
 ```bash
 sudo apt install -y gcc-12
@@ -59,7 +57,7 @@ cd LiME/src
 make
 ```
  
-Expect a `warning: the compiler differs...` line — that's fine as long as it's immediately
+Expect a `warning: the compiler differs...` line   that's fine as long as it's immediately
 followed by `You are using: gcc-12 ...` matching the kernel's compiler. A successful build
 ends with:
  
@@ -88,7 +86,7 @@ ls -lh /home/sandesh/memdump.lime
 ```
  
 On the classroom VM (3.8 GiB RAM per `free -h`) this produced a **4.0 GB** dump file
-owned by `root` with `r--r--r--` permissions — that's expected; the dump size reflects the
+owned by `root` with `r--r--r--` permissions   that's expected; the dump size reflects the
 physical address space, not just "used" memory, and it will differ on other machines/VMs.
  
 **Sanity check with dmesg** (needs `sudo` to read the kernel ring buffer as a
@@ -105,7 +103,7 @@ lime: module verification failed: signature and/or required key missing - tainti
 ```
  
 **Tell students this is expected, not an error.** Any unsigned, out-of-tree kernel module
-taints the kernel and triggers this warning — it's exactly what you want to see, it
+taints the kernel and triggers this warning   it's exactly what you want to see, it
 confirms LiME loaded.
  
 ## 5. Unload the module when done
@@ -115,7 +113,7 @@ sudo rmmod lime
 lsmod | grep lime
 ```
  
-The second command should print nothing — module is gone. The dump file
+The second command should print nothing   module is gone. The dump file
 (`memdump.lime`) stays on disk; unloading the module just removes it from the running
 kernel, it doesn't touch the file you already captured.
  
@@ -123,18 +121,15 @@ kernel, it doesn't touch the file you already captured.
  
 ## Talking points while demoing
  
-- `format=lime` (LiME's own segmented format) vs `format=raw`/`format=padded` — mention
+- `format=lime` (LiME's own segmented format) vs `format=raw`/`format=padded`   mention
   these exist as options but you're using `lime` since that's what the Volatility3
   workflow in this repo expects.
-- `path=` can also be a network destination (e.g. `tcp:4444`) for dumping over the
-  network without writing to local disk — worth a one-line mention, not a live demo
-  unless there's time.
 - Why root/insmod at all: LiME is a loadable kernel module, so capturing memory this way
-  requires kernel module privileges — this is the same reason antivirus/EDR kernel
+  requires kernel module privileges   this is the same reason antivirus/EDR kernel
   drivers need elevated install rights.
 - The dump is only useful for analysis (Volatility3, etc.) if you also generate matching
-  debug symbols for the exact running kernel — that's covered in the other doc in this
-  repo (`How to Create Linux Profile(Volatility 3).md`), out of scope for today.
+  debug symbols for the exact running kernel   that's covered in the other doc in this
+  repo (`How to Create Linux Profile(Volatility 3).md`).
 ## If something goes wrong mid-demo
  
 - `make` error about a missing `gcc-N` → install that exact gcc version (step 2).
