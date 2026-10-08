@@ -1,7 +1,7 @@
 # Linux profile creation steps.....
 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/da9fff0e-a64a-4b2e-b361-adc28cf8f489)
+![image](11.png)
 
 
 I had downloaded and installed Ubuntu 22.04.36LTS which is pretty much stable.
@@ -25,7 +25,7 @@ go build
 git clone https://github.com/volatilityfoundation/dwarf2json.git
 ``` 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/41043bf4-1182-40ac-a8bd-eac06c7fbab7)
+![image](22.png)
 
 
 
@@ -69,7 +69,7 @@ As extra I am also creating system map json file:
 $ sudo ./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-$(uname -r) --system-map /boot/System.map-$(uname -r) > linux-image-$(uname -r)-amd64-SystemMap.json
  ```
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/cb1f68ab-0cfc-45a3-bd9c-5e5ee6300624)
+![image](33.png)
 
 
 
@@ -104,7 +104,7 @@ $ cp /home/kali/dwarf2json/linux-image-6.2.0-36-generic-amd64-SystemMap.json /ho
 linux-image-6.2.0-36-generic-amd64-SystemMap.json
  ```
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/158dd3fb-fb39-476c-ad8a-fdfbfc295837)
+![image](44.png)
 
 
 After this our linux profile is created for this ubuntu 22.04 version.
@@ -153,14 +153,14 @@ After this our linux profile is created for this ubuntu 22.04 version.
 ```sh
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.pslist
 ```
-![image](https://github.com/Sandesh028/Universe/assets/123413262/f83be3ff-929e-416b-84ab-7582ac36cf8d)
+![image](55.png)
  
 
 ### 2] PsScan
 ```sh
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.psscan
 ```
- ![image](https://github.com/Sandesh028/Universe/assets/123413262/791b906e-2fdc-4aed-85fc-887e5e7d0975)
+ ![image](66.png)
 
 
 
@@ -171,26 +171,26 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.psscan
 ```sh
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.pstree
 ```
- ![image](https://github.com/Sandesh028/Universe/assets/123413262/27d26cd3-29d2-4f9c-9efb-a0f4f878bff7)
+ ![image](77.png)
 
 4] Banners
 ```sh
 $ sudo python3 vol.py -f /home/kali/memdump.lime banners.Banners
 ```
- ![image](https://github.com/Sandesh028/Universe/assets/123413262/25fccdaa-6083-4201-8856-27d266301a85)
+ ![image](88.png)
 
 5] Capabilities [Didn’t worked]
 ```sh
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.capabilities.Capabilities
 ```
- ![image](https://github.com/Sandesh028/Universe/assets/123413262/197268e0-ebaa-4045-8892-f1bdb0a52d9d)
+ ![image](99.png)
 
 6] Check Modules
 ```sh
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.check_modules.Check_modules
  ```
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/1732a608-db37-4de6-b1cf-f93cfbe53753)
+![image](100.png)
 
 
 
@@ -199,7 +199,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.check_modules.Check_modul
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.check_syscall.Check_syscall
 ``` 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/0ec88d8d-7e4d-4069-a0f2-56fe3cd7ed4b)
+![image](101.png)
 
 8] Elfs
 ```sh
@@ -207,7 +207,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.elfs.Elfs
 ``` 
 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/4ad44064-2bba-4b80-8429-9cbbea654165)
+![image](102.png)
 
 
 
@@ -217,13 +217,13 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.elfs.Elfs
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.envvars.Envvars
 ``` 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/3e177535-aab2-4d60-a437-697f3cf9cc77)
+![image](103.png)
 
 10] IOMem
 ```sh
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.iomem.IOMem
 ```
- ![image](https://github.com/Sandesh028/Universe/assets/123413262/5dbec2c3-2f45-47d7-8133-06d415598bbb)
+ ![image](104.png)
 
 
 11] Keyboard_Notifiers
@@ -231,7 +231,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.iomem.IOMem
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.keyboard_notifiers.Keyboard_notifiers
 ``` 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/871adbb5-ac34-463b-be67-42c9da1089cf)
+![image](105.png)
 
 
 
@@ -243,7 +243,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.keyboard_notifiers.Keyboa
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.kmsg.Kmsg
 ```
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/9c090b84-f654-4eff-ac40-8fa7462a9d18)
+![image](106.png)
 
 
 13] Lsmod
@@ -251,7 +251,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.kmsg.Kmsg
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.lsmod.Lsmod
 ``` 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/7191867d-0211-4548-93ad-fa0b297044fb)
+![image](107.png)
 
 
 
@@ -262,14 +262,14 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.lsmod.Lsmod
 ```sh
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.lsof.Lsof 
 ```
-![image](https://github.com/Sandesh028/Universe/assets/123413262/1686c62d-6ed3-4da5-9277-2def150e02f0)
+![image](108.png)
 
 15] Malfind
 ```sh
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.malfind.Malfind
 ``` 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/333f37e5-8b4b-4951-94e2-502cf861c223)
+![image](109.png)
 
 
 
@@ -282,7 +282,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.malfind.Malfind
 ```sh
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.mountinfo.MountInfo
 ```
-![image](https://github.com/Sandesh028/Universe/assets/123413262/39bc6414-d832-4847-9eff-6f1819c0e1c0)
+![image](110.png)
  
 
 17] Proc.Maps
@@ -291,7 +291,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.proc.Maps
 ``` 
 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/bb709059-1319-49a8-9a4f-da6fa43f577e)
+![image](111.png)
 
 
 
@@ -307,7 +307,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.proc.Maps
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.psaux.PsAux
 ```
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/5a8e59d2-abf5-4950-ac8b-3fc16c887314)
+![image](112.png)
 
 
 19] Sockstat
@@ -315,7 +315,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.psaux.PsAux
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.sockstat.Sockstat
 ```
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/0c0706b8-25d1-4e93-ade6-3e9de763da4a)
+![image](113.png)
 
 
 20] tty_check
@@ -323,7 +323,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.sockstat.Sockstat
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.tty_check.tty_check
 ``` 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/b3e3611c-6e6d-4ed6-af1a-0c38de8bd22a)
+![image](114.png)
 
 
 21] frameworkinfo.FrameworkInfo
@@ -331,7 +331,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.tty_check.tty_check
 $ sudo python3 vol.py -f /home/kali/memdump.lime frameworkinfo.FrameworkInfo
 ```
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/de090f73-bd06-4d68-8daa-158a9b92690c)
+![image](115.png)
 
 
 22] isfinfo.IsfInfo
@@ -339,7 +339,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime frameworkinfo.FrameworkInfo
 $ sudo python3 vol.py -f /home/kali/memdump.lime isfinfo.IsfInfo
 ```
 
- ![image](https://github.com/Sandesh028/Universe/assets/123413262/b18d1626-4518-4fd2-931e-4d38d854afe9)
+ ![image](116.png)
 
 
 23] layerwriter.LayerWriter
@@ -347,7 +347,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime isfinfo.IsfInfo
 $ sudo python3 vol.py -f /home/kali/memdump.lime layerwriter.LayerWriter
 ```
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/76a32ce6-c2cd-4820-b150-f9fdf76eb1e7)
+![image](117.png)
 
 
 24] Check_afinfo [Didn’t worked]
@@ -355,7 +355,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime layerwriter.LayerWriter
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.check_afinfo.Check_afinfo
 ``` 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/d23a7e59-bcc9-4a82-ab08-8a57a39fd055)
+![image](118.png)
 
 
 25] Check_creds
@@ -363,7 +363,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.check_afinfo.Check_afinfo
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.check_creds.Check_creds
 ```
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/6ad7992c-8c29-4b58-97d7-022f4f3b23e8)
+![image](119.png)
 
 
 26] Check_idt
@@ -371,7 +371,7 @@ $ sudo python3 vol.py -f /home/kali/memdump.lime linux.check_creds.Check_creds
 $ sudo python3 vol.py -f /home/kali/memdump.lime linux.check_idt.Check_idt
 ``` 
 
-![image](https://github.com/Sandesh028/Universe/assets/123413262/f797d31a-1b8c-46ea-b002-65fda67f98fe)
+![image](120.png)
 
 
 ## References:
